@@ -41,7 +41,7 @@ Simply run `yarn install` in the project folder
 - `yarn lint:scripts` : Linting check on the ts(x) files using Eslint
 - `yarn lint:styles` : Linting check on the (s)css files using Stylelint
 - `yarn format:scripts` : Formatting fix on the ts(x) files using Prettier & Eslint
-- `yarn format:scripts` : Formatting fix on the (s)css files using Stylelint
+- `yarn format:styles` : Formatting fix on the (s)css files using Stylelint
 - `storybook:dev` : Runs the storybook on your development environment
 - `storybook:build` : Builds the storybook on your development environment
 
