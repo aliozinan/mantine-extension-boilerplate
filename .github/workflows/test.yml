@@ -1,0 +1,44 @@
+name: Test CI
+
+on:
+  push:
+    branches: [ "v6", "v7" ]
+
+jobs:
+  test-v6:
+    if: github.ref == 'refs/heads/v6'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.20.2]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: 'v6'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: yarn install --frozen-lockfile
+      - run: yarn typecheck
+      - run: yarn test
+
+  test-v7:
+    if: github.ref == 'refs/heads/v7'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.20.2]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: 'v7'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: yarn install --frozen-lockfile
+      - run: yarn typecheck
+      - run: yarn test
