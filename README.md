@@ -11,7 +11,7 @@
 [![Vitest Version](https://img.shields.io/badge/Vitest-v1.5.0-blue?logo=vitest)](https://github.com/vitest-dev/vitest)
 [![React Testing Library Version](https://img.shields.io/badge/React_Testing_Library-v15.0.4-blue?logo=testing-library)](https://github.com/testing-library/react-testing-library)
 [![Prettier Version](https://img.shields.io/badge/Prettier-v3.2.5-blue?logo=prettier)](https://github.com/prettier/prettier)
-[![Eslint Version](https://img.shields.io/badge/Eslint-v9.1.1-blue?logo=eslint)](https://github.com/eslint/eslint)
+[![Eslint Version](https://img.shields.io/badge/Eslint-v8.57.0-blue?logo=eslint)](https://github.com/eslint/eslint)
 [![Stylelint Version](https://img.shields.io/badge/StyleLint-v16.4.0-blue?logo=stylelint)](https://github.com/stylelint/stylelint)
 [![Stoybook Version](https://img.shields.io/badge/Storybook-v8.0.9-blue?logo=storybook)](https://github.com/storybookjs/storybook)
 
