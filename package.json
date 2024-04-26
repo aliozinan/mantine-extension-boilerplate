@@ -39,7 +39,8 @@
     "clean:all": "rimraf dist && rimraf storybook-static",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "lint:scripts": "eslint .",
+    "lint:scripts": "eslint ./src --ext .ts,.tsx",
+    "lint:scripts:fix": "eslint ./src --ext .ts,.tsx --fix",
     "format:scripts": "prettier ./src --write",
     "storybook:dev": "storybook dev",
     "storybook:build": "storybook build"

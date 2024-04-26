@@ -11,8 +11,7 @@
 [![Vitest Version](https://img.shields.io/badge/Vitest-v1.5.0-blue?logo=vitest)](https://github.com/vitest-dev/vitest)
 [![React Testing Library Version](https://img.shields.io/badge/React_Testing_Library-v15.0.4-blue?logo=testing-library)](https://github.com/testing-library/react-testing-library)
 [![Prettier Version](https://img.shields.io/badge/Prettier-v3.2.5-blue?logo=prettier)](https://github.com/prettier/prettier)
-[![Eslint Version](https://img.shields.io/badge/Eslint-v9.1.1-blue?logo=eslint)](https://github.com/eslint/eslint)
-[![Stylelint Version](https://img.shields.io/badge/StyleLint-v16.4.0-blue?logo=stylelint)](https://github.com/stylelint/stylelint)
+[![Eslint Version](https://img.shields.io/badge/Eslint-v8.57.0-blue?logo=eslint)](https://github.com/eslint/eslint)
 [![Stoybook Version](https://img.shields.io/badge/Storybook-v8.0.9-blue?logo=storybook)](https://github.com/storybookjs/storybook)
 
 A boilerplate to help you code your own modules using [Mantine](https://github.com/mantinedev/mantine) components and use in your projects.
@@ -39,9 +38,8 @@ Simply run `yarn install` in the project folder
 - `yarn test` : Run the tests of your component using Vitest, which you need to write inside `Component.test.tsx`
 - `yarn typecheck` : Runs type checking to find out any typing bugs
 - `yarn lint:scripts` : Linting check on the ts(x) files using Eslint
-- `yarn lint:styles` : Linting check on the (s)css files using Stylelint
+- `yarn lint:scripts:fix` : Linting check & fix on the ts(x) files using Eslint
 - `yarn format:scripts` : Formatting fix on the ts(x) files using Prettier & Eslint
-- `yarn format:scripts` : Formatting fix on the (s)css files using Stylelint
 - `storybook:dev` : Runs the storybook on your development environment
 - `storybook:build` : Builds the storybook on your development environment
 
