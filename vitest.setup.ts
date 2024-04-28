@@ -15,7 +15,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: vi.fn(),
     dispatchEvent: vi.fn(),
   })),
-})
+});
 
 React.useLayoutEffect = React.useEffect;
 afterEach(() => cleanup());
