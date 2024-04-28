@@ -6,7 +6,9 @@ import { Component } from './Component';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <MantineProvider>
-      <Component padding="md">Hello world!</Component>
+      <Component padding="md" loading={false}>
+        Hello world!
+      </Component>
     </MantineProvider>
   </React.StrictMode>
 );

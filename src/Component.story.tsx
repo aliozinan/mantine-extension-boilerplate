@@ -11,3 +11,11 @@ export function Usage() {
     </MantineProvider>
   );
 }
+
+export function Unstyled() {
+  return (
+    <MantineProvider>
+      <Component unstyled>Unstyled!</Component>
+    </MantineProvider>
+  );
+}

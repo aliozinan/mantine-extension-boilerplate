@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, tests } from './tests';
-import { Component, ComponentProps, ComponentStylesNames } from './Component';
+import { Component } from './Component';
+import { ComponentProps, ComponentStylesNames } from './Component.types';
 
 const defaultProps: ComponentProps = {
   padding: 'md',
