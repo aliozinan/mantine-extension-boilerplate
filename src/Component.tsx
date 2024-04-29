@@ -8,7 +8,7 @@ import {
   useComponentDefaultProps,
 } from '@mantine/core';
 import { ForwardRefWithStaticComponents } from '@mantine/utils';
-import { ComponentProvider } from './Component.context';
+// import { ComponentProvider, useComponentContext } from './Component.context';
 import useStyles from './Component.styles';
 
 export type ComponentStylesNames = Selectors<typeof useStyles>;
@@ -42,12 +42,10 @@ export function _Component(props: ComponentProps) {
   );
 
   return (
-    <ComponentProvider value={{}}>
-      <Box {...others} data-loading={loading || undefined} className={cx(classes.root, className)}>
-        {loading && <LoadingOverlay visible={loading} unstyled={unstyled} />}
-        <div className={classes.inner}>{children}</div>
-      </Box>
-    </ComponentProvider>
+    <Box {...others} data-loading={loading || undefined} className={cx(classes.root, className)}>
+      {loading && <LoadingOverlay visible={loading} unstyled={unstyled} />}
+      <div className={classes.inner}>{children}</div>
+    </Box>
   );
 }
 
