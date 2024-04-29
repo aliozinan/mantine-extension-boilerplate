@@ -8,7 +8,7 @@ const defaultProps: ComponentProps = {
   loading: false,
 };
 
-describe('@kodkisot/mantine-extension-boilerplate-v7/Component', () => {
+describe('mantine-extension-boilerplate/Component', () => {
   tests.itSupportsSystemProps<ComponentProps, ComponentStylesNames>({
     component: Component,
     props: defaultProps,
@@ -19,7 +19,7 @@ describe('@kodkisot/mantine-extension-boilerplate-v7/Component', () => {
     size: true,
     classes: true,
     refType: HTMLDivElement,
-    displayName: '@kodkisot/mantine-extension-boilerplate-v7/Component',
+    displayName: 'mantine-extension-boilerplate/Component',
     stylesApiSelectors: ['root'],
   });
 

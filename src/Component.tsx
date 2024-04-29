@@ -68,4 +68,4 @@ export const Component = factory<ComponentFactory>((_props, ref) => {
 });
 
 Component.classes = classes;
-Component.displayName = '@kodkisot/mantine-extension-boilerplate-v7/Component';
+Component.displayName = 'mantine-extension-boilerplate/Component';
