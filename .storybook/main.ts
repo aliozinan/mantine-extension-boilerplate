@@ -22,6 +22,9 @@ export default {
     });
   },
   docs: {
-    autodocs: true
-  }
+    autodocs: false
+  },
+  typescript: {
+    reactDocgen: false,
+  },
 };
