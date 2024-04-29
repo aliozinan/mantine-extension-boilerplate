@@ -23,5 +23,5 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [".storybook", "src", "vite*", "dts*"],
-  "exclude": ["node_modules", "storybook-static", ".*"],
+  "exclude": ["node_modules", "storybook-static"],
 }
