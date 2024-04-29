@@ -10,7 +10,7 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: '@kodkisot/mantine-v6-boilerplate',
+      name: 'mantine-extension-boilerplate',
       formats: ['es', 'cjs', 'umd', 'iife'],
       fileName: (format) => `index.${format}.js`,
     },

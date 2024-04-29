@@ -30,6 +30,6 @@ export function _Component(props: ComponentProps) {
   );
 }
 
-_Component.displayName = '@kodkisot/mantine-boilerplate-v6/Component';
+_Component.displayName = 'mantine-extension-boilerplate/Component';
 
 export const Component: ForwardRefWithStaticComponents<ComponentProps, FC> = _Component;

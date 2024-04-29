@@ -6,11 +6,11 @@ import { Component, ComponentProps } from './index';
 
 const defaultProps: ComponentProps = {};
 
-describe('@kodkisot/mantine-boilerplate-v6/Component', () => {
+describe('mantine-extension-boilerplate/Component', () => {
   itSupportsSystemProps({
     component: Component,
     props: defaultProps,
-    displayName: '@kodkisot/mantine-boilerplate-v6/Component',
+    displayName: 'mantine-extension-boilerplate/Component',
   });
 
   it('displays LoadingOverlay based on loading prop', () => {
