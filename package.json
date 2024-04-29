@@ -54,12 +54,6 @@
     "@mantine/utils": "6.0.21"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mantine/core": "6.0.21",
-    "@mantine/hooks": "6.0.21",
-    "@mantine/styles": "6.0.21",
-    "@mantine/utils": "6.0.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
