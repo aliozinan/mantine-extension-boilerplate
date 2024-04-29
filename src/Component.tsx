@@ -9,8 +9,9 @@ import {
   useProps,
   useStyles,
 } from '@mantine/core';
+import '@mantine/core/styles.css';
 import { assignRef } from '@mantine/hooks';
-// import { ComponentProvider, useComponentContext } from './Component.context';
+import { ComponentProvider } from './Component.context';
 import classes from './Component.module.css';
 import { ComponentProps, ComponentFactory } from './Component.types';
 
@@ -57,10 +58,12 @@ export const Component = factory<ComponentFactory>((_props, ref) => {
   assignRef(ref, null);
 
   return (
-    <Box ref={ref} {...getStyles('root')} {...others} mod={[mod]} component="div">
-      <LoadingOverlay visible={loading} unstyled={unstyled} />
-      {children}
-    </Box>
+    <ComponentProvider value={{ getStyles }}>
+      <Box ref={ref} {...getStyles('root')} {...others} mod={[mod]} component="div">
+        <LoadingOverlay visible={loading} unstyled={unstyled} />
+        {children}
+      </Box>
+    </ComponentProvider>
   );
 });
 
