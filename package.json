@@ -1,11 +1,11 @@
 {
-  "name": "@kodkisot/mantine-extension-boilerplate",
+  "name": "mantine-extension-boilerplate",
   "version": "6.0.21",
   "description": "",
   "author": "Kod Kisot <aozinan@gmail.com>",
-  "homepage": "https://github.com/aliozinan/mantine-boilerplate/tree/v6",
+  "homepage": "https://github.com/aliozinan/mantine-extension-boilerplate/tree/v6",
   "repository": {
-    "url": "github:aliozinan/mantine-boilerplate",
+    "url": "github:aliozinan/mantine-extension-boilerplate",
     "type": "git",
     "directory": "src"
   },
@@ -22,6 +22,8 @@
     "emotion",
     "vite",
     "typescript",
+    "module",
+    "extension",
     "boilerplate"
   ],
   "main": "dist/index.cjs.js",
