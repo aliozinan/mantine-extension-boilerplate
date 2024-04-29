@@ -23,6 +23,6 @@
     "noImplicitReturns": false,
     "forceConsistentCasingInFileNames": true,
   },
-  "include": [".storybook", "src", "tests"],
+  "include": [".storybook", "src", "tests", "utils"],
   "exclude": ["node_modules", "storybook-static", ".*"]
 }

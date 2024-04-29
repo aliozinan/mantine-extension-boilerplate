@@ -1,3 +1,4 @@
 .root {
+  --component-padding: 'md';
   padding: var(--mantine-spacing-md);
 }

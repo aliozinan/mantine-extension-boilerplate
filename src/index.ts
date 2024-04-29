@@ -7,4 +7,4 @@ export type {
   ComponentProps,
   ComponentCssVariables,
   ComponentFactory,
-} from './Component';
+} from './Component.types';

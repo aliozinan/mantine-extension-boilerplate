@@ -1,46 +1,18 @@
 import React from 'react';
 import {
   Box,
-  BoxProps,
   createVarsResolver,
-  ElementProps,
   factory,
-  Factory,
   LoadingOverlay,
-  MantineSize,
   MantineTheme,
-  StylesApiProps,
+  rem,
   useProps,
   useStyles,
 } from '@mantine/core';
 import { assignRef } from '@mantine/hooks';
-import { ComponentProvider } from './Component.context';
+// import { ComponentProvider, useComponentContext } from './Component.context';
 import classes from './Component.module.css';
-
-export type ComponentStylesNames = 'root';
-export type ComponentCssVariables = {
-  root: '--component-padding';
-};
-
-export interface ComponentProps
-  extends BoxProps,
-    StylesApiProps<ComponentFactory>,
-    ElementProps<'div'> {
-  /** Padding from theme.spacing, or any valid CSS value to set padding */
-  padding?: MantineSize;
-
-  /** Determines whether a loading overlay should be displayed over the component, `false` by default */
-  loading?: boolean;
-
-  children?: React.ReactNode;
-}
-
-export type ComponentFactory = Factory<{
-  props: ComponentProps;
-  ref: HTMLDivElement;
-  stylesNames: ComponentStylesNames;
-  vars: ComponentCssVariables;
-}>;
+import { ComponentProps, ComponentFactory } from './Component.types';
 
 const defaultProps: Partial<ComponentProps> = {
   padding: 'md',
@@ -49,20 +21,21 @@ const defaultProps: Partial<ComponentProps> = {
 
 const varsResolver = createVarsResolver<ComponentFactory>((_theme: MantineTheme, { padding }) => ({
   root: {
-    '--component-padding': padding,
+    '--component-padding': rem(padding),
   },
 }));
 
 export const Component = factory<ComponentFactory>((_props, ref) => {
   const props = useProps('Component', defaultProps, _props);
   const {
+    padding,
+    loading,
     classNames,
     className,
     style,
     styles,
     unstyled,
     vars,
-    loading,
     children,
     mod,
     ...others
@@ -84,12 +57,10 @@ export const Component = factory<ComponentFactory>((_props, ref) => {
   assignRef(ref, null);
 
   return (
-    <ComponentProvider value={{}}>
-      <Box ref={ref} {...getStyles('root')} {...others} mod={[mod]} component="div">
-        <LoadingOverlay visible={loading} unstyled={unstyled} />
-        {children}
-      </Box>
-    </ComponentProvider>
+    <Box ref={ref} {...getStyles('root')} {...others} mod={[mod]} component="div">
+      <LoadingOverlay visible={loading} unstyled={unstyled} />
+      {children}
+    </Box>
   );
 });
 

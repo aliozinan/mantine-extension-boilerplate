@@ -1,5 +1,4 @@
 import { getContextItemIndex } from './get-context-item-index';
-import { prettyDOM } from '@testing-library/dom'
 
 describe('@mantine/core/utils/get-context-item-index', () => {
   it('returns correct item index based on DOM structure', () => {
@@ -7,7 +6,7 @@ describe('@mantine/core/utils/get-context-item-index', () => {
     parent.classList.add('parent');
     const items = Array(10)
       .fill(0)
-      .map((_, i) => {
+      .map(() => {
         const element = document.createElement('span');
         element.classList.add(`child`);
         return element;
@@ -20,9 +19,6 @@ describe('@mantine/core/utils/get-context-item-index', () => {
     nestedContainer.appendChild(nestedItem);
     items.forEach((item) => parent.appendChild(item));
     parent.appendChild(nestedContainer);
-
-    console.log(prettyDOM(parent));
-    console.log(getContextItemIndex('.child', '.parent', items[0]));
 
     expect(getContextItemIndex('.child', '.parent', items[0])).toBe(0);
     expect(getContextItemIndex('.child', '.parent', items[5])).toBe(5);
