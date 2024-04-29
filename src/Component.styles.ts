@@ -24,5 +24,6 @@ export default createStyles((theme, { padding }: ComponentStylesParams) => ({
   inner: {
     pointerEvents: 'none',
     userSelect: 'none',
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
   },
 }));

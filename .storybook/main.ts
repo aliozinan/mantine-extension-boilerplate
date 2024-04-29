@@ -1,9 +1,10 @@
 export default {
-  stories: ['../src/*.story.@(js|jsx|mjs|ts|tsx)'],
+  stories: ['../src/*.story.@(js|jsx|mjs|ts|tsx)', '../src/**/*.story.@(js|jsx|mjs|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@chromatic-com/storybook'
+    '@chromatic-com/storybook',
+    'storybook-dark-mode',
   ],
   framework: {
     name: '@storybook/react-vite',
@@ -22,6 +23,9 @@ export default {
     });
   },
   docs: {
-    autodocs: true
-  }
+    autodocs: false
+  },
+  typescript: {
+    reactDocgen: false,
+  },
 };

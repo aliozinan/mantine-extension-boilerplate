@@ -1,13 +1,12 @@
-/* eslint-disable no-console */
 import React from 'react';
-import { Component } from './index';
+import { Component } from './Component';
 
 export default { title: 'Component' };
 
 export function Usage() {
-  return (
-    <div>
-      <Component padding={8}>Hello world!</Component>
-    </div>
-  );
+  return <Component>Hello World!</Component>;
+}
+
+export function Unstyled() {
+  return <Component unstyled>Unstyled!</Component>;
 }

@@ -35,14 +35,13 @@
     "start": "vite --host --open",
     "build": "npm run clean && tsc --noEmit && vite build",
     "build:types": "dts-bundle-generator --config ./dts-bundle-generator.config.ts --no-banner",
-    "clean": "rimraf dist",
-    "clean:all": "rimraf dist && rimraf storybook-static",
+    "clean": "rimraf dist && rimraf storybook-static && rimraf .stylelintcache && rimraf node_modules/.cache && rimraf node_modules/.vite",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "lint:scripts": "eslint ./src --ext .ts,.tsx",
     "lint:scripts:fix": "eslint ./src --ext .ts,.tsx --fix",
     "format:scripts": "prettier ./src --write",
-    "storybook:dev": "storybook dev",
+    "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
   "dependencies": {
