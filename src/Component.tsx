@@ -61,7 +61,7 @@ export const Component = factory<ComponentFactory>((_props, ref) => {
     <ComponentProvider value={{ getStyles }}>
       <Box ref={ref} {...getStyles('root')} {...others} mod={[mod]} component="div">
         <LoadingOverlay visible={loading} unstyled={unstyled} />
-        {children}
+        <div className={classes.inner}>{children}</div>
       </Box>
     </ComponentProvider>
   );

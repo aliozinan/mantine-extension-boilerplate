@@ -1,4 +1,24 @@
 .root {
   --component-padding: 'md';
   padding: var(--mantine-spacing-md);
+
+  @mixin where-light {
+    background-color: var(--mantine-color-white);
+  }
+
+  @mixin where-dark {
+    background-color: var(--mantine-color-dark-7);
+  }
+}
+
+.inner {
+  pointer-events: none;
+  user-select: none;
+  @mixin where-light {
+    background-color: var(--mantine-color-white);
+  }
+
+  @mixin where-dark {
+    background-color: var(--mantine-color-dark-7);
+  }
 }

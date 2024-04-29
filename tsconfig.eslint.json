@@ -2,8 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "commonjs",
     "jsx": "react-jsx",
     "types": ["vite/client", "vitest/jsdom", "@testing-library/jest-dom", "node", "react"],
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
